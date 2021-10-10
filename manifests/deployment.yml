@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: satmakurazureakskubernetesmasterclass 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: satmakurazureakskubernetesmasterclass
+  template:
+    metadata:
+      labels:
+        app: satmakurazureakskubernetesmasterclass 
+    spec:
+      containers:
+        - name: satmakurazureakskubernetesmasterclass 
+          image: aksrg1.azurecr.io/satmakurazureakskubernetesmasterclass
+          ports:
+          - containerPort: 80
